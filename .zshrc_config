@@ -1,0 +1,29 @@
+# Add this line in the end of your .zshrc
+
+# Pay attention of your powerline-shell.py location and change it if it's in another path
+function powerline_precmd() {
+    PS1="$(~/terminal/powerline-shell/powerline-shell.py $? --shell zsh 2> /dev/null)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+=true
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi
+
+# Pay attention of your z.sh location and change it if it's in another path
+. ~/terminal/z/z.sh
+
+# Pay attention of your powerlevel9k.zsh-theme location and change it if it's in another path
+source  ~/terminal/powerlevel9k/powerlevel9k.zsh-theme
+POWERLEVEL9K_DISABLE_RPROMPT=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time root_indicator context dir vcs)
+POWERLEVEL9K_STATUS_VERBOSE=true
+POWERLEVEL9K_TIME_FORMAT="%D{%d.%m %H:%M:%S}"
