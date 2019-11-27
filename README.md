@@ -13,4 +13,3 @@ Paraphrasing [Felix Krause's setup repo](https://github.com/KrauseFx/what-termin
 * I use [z](https://github.com/rupa/z) an amazing tool to quickly jump between projects. It learns which directories you visit most and autocomplete their path on the terminal
 * I use [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) to improve even more the experience.
 * I use a set of aliases for git and you can check them at [GitAliases](https://github.com/LeonardoCardoso/GitAliases/)
-* I use [TermHere](https://itunes.apple.com/br/app/termhere/id1114363220?mt=12) to open a terminal on a specific folder from Finder. I just changed the Terminal App option on its configuration to open iTerm2 instead stock Mac terminal.
